@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConnectHub — Create Post</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/index.html" class="logo">ConnectHub</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/index.html" class="nav__link">Home</a>
+        <a href="/create-post.html" class="nav__link nav__link--active">Create Post</a>
+        <a href="#" id="nav-profile" class="nav__link">Profile</a>
+      </nav>
+      <div class="header__actions">
+        <span id="nav-username" class="nav__user"></span>
+        <button type="button" id="logout-btn" class="btn btn--ghost btn--small">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section class="card form-card">
+      <h1>Create a Post</h1>
+      <p class="muted">Share what's on your mind with your followers.</p>
+
+      <div id="form-alert" class="alert" hidden></div>
+
+      <form id="create-post-form" class="stack-form">
+        <label class="form-field">
+          <span>Content</span>
+          <textarea id="post-content" class="input textarea" maxlength="2000" rows="6" placeholder="What's happening?"></textarea>
+          <span id="char-counter" class="char-counter">0 / 2000</span>
+        </label>
+        <label class="form-field">
+          <span>Image URL (optional)</span>
+          <input type="url" id="post-image" class="input" placeholder="https://example.com/image.jpg">
+        </label>
+        <div class="form-actions">
+          <button type="button" id="cancel-post-btn" class="btn btn--ghost">Cancel</button>
+          <button type="submit" id="submit-post-btn" class="btn btn--primary">Create Post</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/posts.js"></script>
+</body>
+</html>

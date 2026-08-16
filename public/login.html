@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConnectHub — Login</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/auth.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body class="auth-page">
+  <main class="auth-container">
+    <section class="auth-card card">
+      <a href="/index.html" class="logo logo--center">ConnectHub</a>
+      <h1>Welcome back</h1>
+      <p class="muted">Sign in to continue to your feed.</p>
+
+      <div id="form-alert" class="alert" hidden></div>
+
+      <form id="login-form" class="auth-form" novalidate>
+        <label class="form-field">
+          <span>Email</span>
+          <input type="email" id="email" name="email" class="input" required autocomplete="email">
+        </label>
+        <label class="form-field">
+          <span>Password</span>
+          <input type="password" id="password" name="password" class="input" required autocomplete="current-password">
+        </label>
+        <button type="submit" id="login-btn" class="btn btn--primary btn--block">Login</button>
+      </form>
+
+      <p class="auth-switch">
+        Don't have an account?
+        <a href="/register.html">Register</a>
+      </p>
+    </section>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/posts.js"></script>
+</body>
+</html>

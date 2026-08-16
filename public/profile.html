@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConnectHub — Profile</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/index.html" class="logo">ConnectHub</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/index.html" class="nav__link">Home</a>
+        <a href="/create-post.html" class="nav__link">Create Post</a>
+        <a href="#" id="nav-profile" class="nav__link nav__link--active">Profile</a>
+      </nav>
+      <div class="header__actions">
+        <span id="nav-username" class="nav__user"></span>
+        <button type="button" id="logout-btn" class="btn btn--ghost btn--small">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main" id="profile-page">
+    <div id="profile-loading" class="loading-state">Loading profile...</div>
+    <div id="profile-alert" class="alert" hidden></div>
+
+    <section class="card profile-card">
+      <div class="profile-card__header">
+        <div id="profile-avatar" class="profile-avatar"></div>
+        <div class="profile-card__info">
+          <h1 id="profile-name"></h1>
+          <p id="profile-username" class="profile-card__username"></p>
+          <p id="profile-bio" class="profile-card__bio"></p>
+          <div class="profile-stats">
+            <span><strong id="posts-count">0</strong> Posts</span>
+            <button type="button" id="followers-btn" class="profile-stat-btn">
+              <strong id="followers-count">0</strong> Followers
+            </button>
+            <button type="button" id="following-btn" class="profile-stat-btn">
+              <strong id="following-count">0</strong> Following
+            </button>
+          </div>
+          <div class="profile-actions">
+            <button type="button" id="follow-btn" class="btn btn--primary" hidden>Follow</button>
+            <button type="button" id="edit-profile-btn" class="btn btn--ghost" hidden>Edit Profile</button>
+          </div>
+        </div>
+      </div>
+
+      <form id="edit-profile-form" class="stack-form profile-edit-form" hidden>
+        <label class="form-field">
+          <span>Name</span>
+          <input type="text" id="edit-name" class="input" maxlength="100">
+        </label>
+        <label class="form-field">
+          <span>Bio</span>
+          <textarea id="edit-bio" class="input textarea" maxlength="500" rows="4"></textarea>
+        </label>
+        <label class="form-field">
+          <span>Profile Image URL</span>
+          <input type="url" id="edit-profile-image" class="input">
+        </label>
+        <button type="submit" class="btn btn--primary">Save Changes</button>
+      </form>
+    </section>
+
+    <section class="profile-posts-section">
+      <h2>Posts</h2>
+      <div id="profile-posts" class="feed"></div>
+    </section>
+
+    <div id="user-list-modal" class="modal" hidden>
+      <div class="modal__backdrop" data-close-modal></div>
+      <div class="modal__panel card" role="dialog" aria-modal="true" aria-labelledby="user-list-title">
+        <div class="modal__header">
+          <h2 id="user-list-title"></h2>
+          <button type="button" class="btn btn--ghost btn--small" data-close-modal aria-label="Close">Close</button>
+        </div>
+        <div id="user-list-loading" class="loading-state">Loading...</div>
+        <ul id="user-list" class="user-list"></ul>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/comments.js"></script>
+  <script src="/js/feed.js"></script>
+  <script src="/js/profile.js"></script>
+</body>
+</html>

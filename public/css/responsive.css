@@ -1,0 +1,54 @@
+@media (max-width: 768px) {
+  .header__inner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.75rem 0;
+  }
+
+  .nav,
+  .header__actions {
+    justify-content: center;
+  }
+
+  .profile-card__header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-stats,
+  .profile-actions {
+    justify-content: center;
+  }
+
+  .post-card__header {
+    flex-direction: column;
+  }
+
+  .comment-form {
+    flex-direction: column;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding-top: 1.25rem;
+  }
+
+  .card,
+  .post-card {
+    padding: 1rem;
+  }
+
+  .pagination {
+    flex-direction: column;
+  }
+}
