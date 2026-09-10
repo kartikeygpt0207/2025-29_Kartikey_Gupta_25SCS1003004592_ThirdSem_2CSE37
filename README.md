@@ -1,137 +1,105 @@
-# ConnectHub — Social Media Platform
+# CodeAlpha Full Stack Development Virtual Internship
 
-A full-stack social media web application built with Node.js, Express, MongoDB, and vanilla JavaScript.
+CodeAlpha Virtual Internship Program | Full Stack Web Development
 
-## Features
+This repository contains my internship report, presentation, and completion credentials for the **Full Stack Development** track of the **CodeAlpha Virtual Internship Program** (July – August 2026).
 
-- User registration, login, logout (JWT in httpOnly cookies)
+## 👤 Student Details
+
+| Field | Details |
+| --- | --- |
+| Name | Kartikey Gupta |
+| Roll Number | 25SCS1003004592 |
+| Section | 2CSE37 |
+| Programme | B.Tech CSE, Batch 2025–2029 |
+| Internship Domain | Full Stack Web Development |
+| Duration | 1 Month (10 July 2026 – 10 August 2026) |
+| Student ID | CA/DF1/194583 |
+| GitHub | [@kartikeygpt0207](https://github.com/kartikeygpt0207) |
+
+## 📌 About the Internship
+
+The internship focused on building a complete full stack web application — **ConnectHub Social Media Platform** — using modern frontend and backend technologies. The program covered REST API development, MongoDB database design, JWT authentication, posts/feeds, likes, comments, and user follow systems.
+
+**Organization:** [CodeAlpha](https://www.codealpha.tech) — Virtual Internship Program in Software Development domains.
+
+## 🎯 Objectives
+
+- Build user registration and JWT-based authentication
+- Implement post creation, viewing, and deletion
+- Develop personalized home feed functionality
+- Add like/unlike and comment features
+- Create user profiles with follow/unfollow system
+- Design RESTful APIs with MongoDB persistence
+- Document the project and submit internship deliverables
+
+## 🛠️ Technologies & Tools
+
+`HTML5` · `CSS3` · `JavaScript` · `Node.js` · `Express.js` · `MongoDB` · `Mongoose` · `JWT` · `bcryptjs` · `Git` · `VS Code`
+
+## 🏆 Certification & Credentials
+
+| Field | Details |
+| --- | --- |
+| Certificate Title | Certificate of Virtual Internship – Full Stack Development |
+| Student ID | `CA/DF1/194583` |
+| Duration | 10 July 2026 – 10 August 2026 |
+| Issued On | 1 September 2026 |
+| Issued By | CodeAlpha |
+
+### 🔗 Reference Links
+
+- CodeAlpha Website: https://www.codealpha.tech
+- CodeAlpha LinkedIn: https://www.linkedin.com/company/codealpha
+- Email: services@codealpha.tech
+
+## 📁 Repository Contents
+
+```
+├── Internship_Completion_Certificate_Kartikey_Gupta.pdf   # Completion certificate
+├── Letter_of_Recommendation_Kartikey_Gupta.pdf            # Letter of recommendation
+├── Internship_Report_Kartikey_Gupta.pdf                   # Full internship report
+├── PPT_Full_Stack_Internship_Kartikey_Gupta.pdf           # Presentation (PDF)
+└── README.md                                              # This file
+```
+
+## 📄 Report Structure
+
+1. Candidate's Declaration
+2. Acknowledgement
+3. Internship Completion Certificate
+4. Project Description
+   - 4.1 Introduction
+   - 4.2 Organization Profile
+   - 4.3 Problem Statement
+   - 4.4 Project Objectives
+   - 4.5 Scope of the Project
+   - 4.6 Technologies and Tools Used
+   - 4.7 System Architecture
+   - 4.8 Methodology
+   - 4.9 Expected Outcomes
+   - 4.10 Implementation Details
+   - 4.11 Certificates of Completion and Communication Proof
+5. Learning Outcomes
+6. Conclusion
+7. Bibliography / References
+
+## 🚀 Project: ConnectHub — Social Media Platform
+
+The internship project is a full stack social media web application with:
+
+- User registration, login, and logout (JWT in httpOnly cookies)
 - Create, view, and delete posts
-- Personalized home feed (your posts + posts from users you follow)
-- Like and unlike posts
-- Add, list, and delete comments
-- User profiles with edit support
-- Follow / unfollow users
-- Followers and following lists
+- Personalized home feed
+- Like/unlike posts and add comments
+- User profiles with follow/unfollow system
 
-## Technology Stack
+**Repository:** [2025-29_Kartikey_Gupta_25SCS1003004592_ThirdSem_2CSE37](https://github.com/kartikeygpt0207/2025-29_Kartikey_Gupta_25SCS1003004592_ThirdSem_2CSE37)
 
-- HTML5, CSS3, Vanilla JavaScript
-- Node.js, Express.js
-- MongoDB, Mongoose
-- JWT authentication, bcryptjs password hashing
-- helmet, cors, express-rate-limit, express-validator
+## 🙏 Acknowledgement
 
-## Requirements
+Thanks to **CodeAlpha** for the internship opportunity and mentorship, and to my institute faculty for their continuous support throughout the programme.
 
-- Node.js 18+
-- MongoDB 6+ (local or Atlas)
+---
 
-## Installation
-
-1. Open the project folder:
-
-```bash
-cd social-media-app
-```
-
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-3. Copy the environment file:
-
-```bash
-cp .env.example .env
-```
-
-4. Update `.env` with your MongoDB connection string and JWT secret.
-
-## Environment Variables
-
-| Variable | Description | Example |
-|----------|-------------|---------|
-| `PORT` | Server port | `5000` |
-| `MONGODB_URI` | MongoDB connection string | `mongodb://127.0.0.1:27017/social-media-app` |
-| `JWT_SECRET` | Secret for signing JWT tokens | `your_secret_key_change_in_production` |
-| `NODE_ENV` | Environment mode | `development` |
-
-## Development
-
-Ensure MongoDB is running, then start the server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:5000](http://localhost:5000).
-
-## Production
-
-```bash
-npm start
-```
-
-## Project Structure
-
-```
-social-media-app/
-├── server/
-│   ├── config/db.js
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── utils/
-│   └── server.js
-├── public/
-│   ├── css/
-│   ├── js/
-│   └── *.html
-├── .env.example
-├── package.json
-└── README.md
-```
-
-## API Endpoints
-
-### Auth
-- `POST /api/auth/register` — Register
-- `POST /api/auth/login` — Login
-- `POST /api/auth/logout` — Logout
-- `GET /api/auth/me` — Current user
-
-### Users
-- `GET /api/users/:id` — Profile
-- `PUT /api/users/:id` — Update own profile
-- `GET /api/users/:id/posts` — User posts
-- `GET /api/users/:id/followers` — Followers list
-- `GET /api/users/:id/following` — Following list
-- `POST /api/users/:id/follow` — Follow user
-- `DELETE /api/users/:id/follow` — Unfollow user
-
-### Posts
-- `GET /api/posts` — Personalized feed
-- `POST /api/posts` — Create post
-- `GET /api/posts/:id` — Single post
-- `DELETE /api/posts/:id` — Delete own post
-- `POST /api/posts/:id/like` — Like post
-- `DELETE /api/posts/:id/like` — Unlike post
-- `GET /api/posts/:postId/comments` — List comments
-- `POST /api/posts/:postId/comments` — Add comment
-
-### Comments
-- `DELETE /api/comments/:id` — Delete own comment
-
-### Health
-- `GET /api/health` — Server health check
-
-## Recommended Test Flow
-
-1. Register two users
-2. Log in as user A, create a post
-3. Like and comment on the post
-4. Visit user B's profile and follow them
-5. Log in as user B, create a post
-6. Log back in as user A — user B's post should appear in the feed
+**Kartikey Gupta** · B.Tech CSE · 2CSE37 · Batch 2025–2029
